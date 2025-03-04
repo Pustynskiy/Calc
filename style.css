@@ -1,0 +1,37 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+fieldset {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+input[type="text"] {
+    width: 100px;
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: border-color 0.3s;
+}
+.error-border {
+    border: 2px solid red;
+    outline: 2px solid red;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 10px;
+}
+#results {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

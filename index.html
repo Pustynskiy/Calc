@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор комплексных чисел</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Калькулятор комплексных чисел</h1>
+    <form id="complexCalculator">
+        <fieldset>
+            <legend>Выберите форму представления:</legend>
+            <label>
+                <input type="radio" name="form" value="exponential" checked> Показательная форма
+            </label>
+            <label>
+                <input type="radio" name="form" value="trigonometric"> Тригонометрическая форма
+            </label>
+            <button type="button" onclick="updateForm()">Показать</button>
+        </fieldset>
+        <fieldset id="inputFields">
+            <legend>Введите данные:</legend>
+            <label for="modulus">Модуль (r):</label>
+            <input type="text" id="modulus" name="modulus" required>
+            <span class="error" id="modulusError"></span>
+            <br>
+            <label for="argument">Аргумент (φ):</label>
+            <input type="text" id="argument" name="argument" required>
+            <span class="error" id="argumentError"></span>
+            <br>
+            <label for="unit">Единицы измерения:</label>
+            <select id="unit">
+                <option value="radians">Радианы</option>
+                <option value="degrees">Градусы</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите операции:</legend>
+            <select id="operations" multiple size="4">
+                <option value="realPart">Действительная часть</option>
+                <option value="imaginaryPart">Мнимая часть</option>
+                <option value="argumentCalc">Аргумент</option>
+                <option value="otherForms">Прочие формы</option>
+            </select>
+            <span class="error" id="operationsError"></span>
+        </fieldset>
+        <button type="button" onclick="calculate()">Вычислить</button>
+        <button type="button" onclick="clearInputs()">Очистить</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
